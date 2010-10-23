@@ -1,0 +1,24 @@
+WinerLinks.js
+=============
+
+Dave Winer's blog uses handy paragraph-level permalinks.
+WinerLinks is a simple jQuery plugin that adds that functionality
+to paragraphs (or any DOM element) in any blog post.
+
+Point jQuery to the root `div` surrounding your text,
+and you're done.
+
+    $('#entry-text').winerlinks()
+
+By default, WinerLinks fills in a title, text and adds a
+`permalink` class to each link. Resulting in:
+
+    <a class='permalink' title='Link to this paragraph' href='#p-1'> #</a>
+
+You can alter those defaults by passing in options:
+
+    $('#entry-text').winerlinks({
+        title: "Link here",
+        className: "winerlink",
+        linkText: "Link!"
+    })
